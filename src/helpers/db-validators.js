@@ -30,3 +30,9 @@ export const petExists = async (id = "") => {
 };
 
 
+export const appointExists = async (num = '') =>{
+    const existe = await appoint.findById(num);
+    if(!existe){
+        throw new Error("No existe una cita con el ID proprocionado")
+    }
+}

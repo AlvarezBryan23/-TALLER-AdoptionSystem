@@ -3,6 +3,7 @@ import Appointment from "../appointment/appointment.model.js";
 import { parse } from "date-fns";
 
 export const saveAppointment = async (req, res) => {
+
   try {
     const data = req.body;
 
@@ -56,3 +57,73 @@ export const saveAppointment = async (req, res) => {
     });
   }
 };
+
+export const getAppoint = async (req, res) => {
+  try{
+    const {limit = 5, desde = 0} = req.query
+    const query = {status: true}
+    
+    const [total, pet ] = await Promise.all([
+      Pet.countDocuments(query),
+      Pet.find(query)
+      .skip(Number(desde))
+      .limit(Number(limite))
+    ])
+
+    return res.status(200).json({
+      success: true,
+      total,
+      pet
+  })
+
+  }catch(err){
+    return res.status(200).json({
+      success: false,
+      message: "Error al obtener las citas",
+      error: err.message
+    })
+  }
+}
+
+export const updateAppoint = async (req, res) =>{
+  try{
+      const { num } = req.params;
+      const data = req.body;
+
+      const appoint = await Appointment.findByIdAndUpdate(num, data, {new: true});
+
+      res.status(200).json({
+        success: true,
+        msg: 'Cita actualizada',
+        appoint,
+      });
+  }catch(err){
+    res.status(500).json({
+      succes: false,
+      msg: 'Error al actualizar una cita',
+      error: err.message
+    })
+  }
+}
+
+
+export const deleteAppoint = async (req, res) => {
+  try{
+    const { num } = req.params
+
+    const appoint = await Appointment.findByIdAndUpdate(num, {status: false}, {new:true})
+
+    return res.status(200).json({
+      succes:true,
+      message: "La cita se actualizo",
+      appoint
+    })
+    
+  }catch(err){
+    return res.status(500).json({
+      success: false,
+      message: "Error al cancelar su cita",
+      error: err.message
+    })
+  }
+}
