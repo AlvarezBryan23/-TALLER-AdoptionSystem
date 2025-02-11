@@ -56,8 +56,8 @@ export const updatePasswordValidator = [
 ]
 
 export const updateUserValidator = [
-    param("id", "No es un ID válido").isMongoId(),
-    param("id").custom(userExists),
+    param("num", "No es un ID válido").isMongoId(),
+    param("num").custom(userExists),
     validarCampos,
     handleErrors
 ]

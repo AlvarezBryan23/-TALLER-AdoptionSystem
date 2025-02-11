@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "7ab58889-5119-4ada-9d02-6b18e260d4af",
+		"name": "API-Vespertina",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37585469"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Fredy",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Balenciagass",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "fbalenciaga",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "Fredybalenciaga@gmail.es",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "22160098",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Bry22an$",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "ADMIN_ROLE",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "/C:/Users/Dell/Pictures/WhatsApp Image 2025-01-23 at 11.07.07 PM.jpeg"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:3001/adoptionSystem/v1/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Joséss",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Balenciagass",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "jbalenciaga3",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jbalenciaga3@gmail.es",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "22160098",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "ADMIN_ROLE",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "postman-cloud:///1ef4dc1f-9b79-4680-a529-ea114dc8ffeb"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:3001/adoptionSystem/v1/auth/register"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Buscar un usuario por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar ususario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:3001/adoptionSystem/v1/user/findUser/679cedc00c50f098afb74105"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar contraseña",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3001/adoptionSystem/v1/user/updatePassword/679cef6b0a9ac952c4552d76"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar foto de perfil",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "/C:/Users/Dell/Pictures/Infografía de Seminario.png"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:3001/adoptionSystem/v1/user/updateProfilePicture/67aad243df70a5201be8e7c1"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Joséss",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Balenciagass",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "jbalenciaga3",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jbalenciaga3@gmail.es",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "22160098",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "ADMIN_ROLE",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "postman-cloud:///1ef4dc1f-9b79-4680-a529-ea114dc8ffeb"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:3001/adoptionSystem/v1/user/updateUser"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pets",
+			"item": [
+				{
+					"name": "Buscar mascota por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:3001/adoptionSystem/v1/pet/findPet/67a12b26af19e9044c8341da"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar mascota",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:3001/adoptionSystem/v1/pet/deletePet/679cedc00c50f098afb74105"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar mascotas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar mascota",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Burbuja\",\r\n    \"description\": \"Es cachorra todavia\",\r\n    \"age\":1,\r\n    \"type\": \"Perra\",\r\n    \"email\": \"jbalenciaga3@gmail.es\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3001/adoptionSystem/v1/pet/addPet"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appointment",
+			"item": [
+				{
+					"name": "Agregar una cita",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2025-02-10\",\r\n    \"pet\": \"67aac656b2403bb62a8c8b0a\",\r\n    \"user\": \"67aac4d753fb23f2e9547c9f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3001/adoptionSystem/v1/appointment/createAppointment"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar cita",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2025-02-10\",\r\n    \"pet\": \"67aac656b2403bb62a8c8b0a\",\r\n    \"user\": \"67aac4d753fb23f2e9547c9f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3001/adoptionSystem/v1/appointment/"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar cita",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2022-10-15\",\r\n    \"pet\": \"67aac656b2403bb62a8c8b0a\",\r\n    \"user\": \"67aac4d753fb23f2e9547c9f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3001/adoptionSystem/v1/appointment/updateAppoint/67aac4d753fb23f2e9547c9f"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

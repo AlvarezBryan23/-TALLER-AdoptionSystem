@@ -5,9 +5,10 @@ import { createAppointmentValidator, deleteAppointValidator, updateAppointValida
 const router = Router();
 
 router.post("/createAppointment", createAppointmentValidator, saveAppointment);
-router.post("/", getAppoint)
+router.get("/", getAppoint)
 
-router.put("/updateAppoint/:num", updateAppointValidator,  updateAppoint)
+router.patch("/updateAppoint/:num", updateAppointValidator,  updateAppoint)
 
 router.put("/deleteAppoint/:num", deleteAppointValidator, deleteAppoint)
+
 export default router;

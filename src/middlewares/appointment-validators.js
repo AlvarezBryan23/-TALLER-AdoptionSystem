@@ -19,7 +19,7 @@ export const getPetsByIdValidator = [
 ]
 
 export const updateAppointValidator = [
-    body("num", "No es un ID válido").isMongoId(),
+    body("num").isMongoId().withMessage("No es un id válido"),
     body("num").custom(appointExists),
     validarCampos,
     handleErrors

@@ -135,6 +135,3 @@ Cuerpo:
   total
   users
 }
-
-
-Descripción: Implementar funcionalidad para cancelar una cita existente.
