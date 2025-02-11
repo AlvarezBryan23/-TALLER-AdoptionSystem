@@ -121,8 +121,8 @@ Método: GET
 Cuerpo:
 {
   "success": "true",
-  total
-  users
+  total: 1,
+  "pet":[]
 }
 
 Actualizar Cita

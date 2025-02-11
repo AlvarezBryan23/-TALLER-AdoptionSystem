@@ -60,14 +60,14 @@ export const saveAppointment = async (req, res) => {
 
 export const getAppoint = async (req, res) => {
   try{
-    const {limit = 5, desde = 0} = req.query
+    const {limit = 1, desde = 0} = req.query
     const query = {status: true}
     
     const [total, pet ] = await Promise.all([
       Pet.countDocuments(query),
       Pet.find(query)
-      .skip(Number(desde))
-      .limit(Number(limite))
+        .skip(Number(desde))
+        .limit(Number(limit))
     ])
 
     return res.status(200).json({
