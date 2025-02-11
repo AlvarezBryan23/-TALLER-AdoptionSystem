@@ -114,10 +114,27 @@ Cuerpo:
   "user": ""
 }
 
-Descripción: Implementar funcionalidad para listar todas las citas de un usuario.
-Actualizar Cita
+Listar Citas:
+Listar las citas que hay
+URL: "/"
+Método: GET
+Cuerpo:
+{
+  "success": "true",
+  total
+  users
+}
 
-Descripción: Implementar funcionalidad para actualizar una cita existente.
-Cancelar Cita
+Actualizar Cita
+Actualizar las citas que quiera el usuario
+URL: "/"
+Método: PATCH
+Cuerpo:
+{
+  "success": "true",
+  total
+  users
+}
+
 
 Descripción: Implementar funcionalidad para cancelar una cita existente.

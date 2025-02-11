@@ -13,20 +13,20 @@ export const createAppointmentValidator = [
 
 export const getPetsByIdValidator = [
     body("num").isMongoId().withMessage("No es un id válido"),
-    param("num").customn(appointExists),
+    body("num").custom(appointExists),
     validarCampos,
     handleErrors
 ]
 
 export const updateAppointValidator = [
-    param("num", "No es un ID válido").isMongoId(),
-    param("num").custom(appointExists),
+    body("num", "No es un ID válido").isMongoId(),
+    body("num").custom(appointExists),
     validarCampos,
     handleErrors
 ]
 export const deleteAppointValidator = [
-    param("num").isMongoId().withMessage("No es un ID válido de MongoDB"),
-    param("num").custom(appointExists),
+    body("num").isMongoId().withMessage("No es un ID válido de MongoDB"),
+    body("num").custom(appointExists),
     validarCampos,
     handleErrors
 ]
